@@ -1,0 +1,19 @@
+env_name: 'beerfmtenv'
+model_name: 'ppo'
+normalize: False
+dense_reward: True
+config_dir: 'algo_configs/online_experiments/'
+
+use_tune: True
+num_gpus: 1
+num_workers: 4
+train_iter: 2000
+plt_dir: "plt_results"
+local_dir: "ray_results"
+
+scaler: 'min_max' # None, 'pixel', 'min_max', 'standard'
+action_scaler: 'min_max' # None, 'min_max'
+reward_scaler: 'min_max' # None, 'min_max', 'standard'
+evaluate_on_environment: True
+
+best_checkpoint_path: checkpoints/online_checkpoint_ppo/checkpoint-30

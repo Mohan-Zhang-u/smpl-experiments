@@ -1,0 +1,12 @@
+numpy>=1.21.0
+pandas>=1.2.4
+scipy>=1.6.1
+gym>=0.18.3
+tqdm>=4.59.0
+torch
+mzutils>=0.2006
+smpl
+ray
+ray[tune]
+ray[rllib]
+d3rlpy

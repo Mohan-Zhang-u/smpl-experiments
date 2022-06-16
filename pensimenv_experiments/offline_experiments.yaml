@@ -1,0 +1,39 @@
+seed: 4042
+num_of_seeds: 1
+env_name: 'pensimenv'
+model_name: 'ppo'
+normalize: False
+dense_reward: True
+debug_mode: False
+
+# for online learning
+online_training: False
+buffer_maxlen: 1000000
+explorer_start_epsilon: 1.0
+explorer_end_epsilon: 0.1
+explorer_duration: 20000
+n_steps_per_epoch: 200
+online_random_steps: 600
+online_update_interval: 100
+online_save_interval: 100
+
+# for offline data generation and training
+N_EPOCHS: 500
+DYNAMICS_N_EPOCHS: 100
+scaler: 'min_max' # None, 'pixel', 'min_max', 'standard'
+action_scaler: 'min_max' # None, 'min_max'
+reward_scaler: 'min_max' # None, 'min_max', 'standard'
+evaluate_on_environment: True
+default_loc: "d3rlpy_logs/"
+plt_dir: "plt_results"
+dataset_location: offline_datasets # for dataset generation
+training_dataset_loc: 'offline_datasets/pensimenv/900_normalize=False.pkl'
+eval_dataset_loc: 'offline_datasets/pensimenv/110_normalize=False.pkl'
+test_initial_states: 'offline_datasets/mabenv/initial_states/100.npy'
+
+# env specific configs
+reward_on_steady: True
+reward_on_absolute_efactor: False
+compute_diffs_on_reward: False
+standard_reward_style: 'setpoint'
+initial_state_deviation_ratio: 0.1

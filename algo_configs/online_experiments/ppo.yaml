@@ -1,0 +1,7 @@
+plt_dir: "plt_results"
+best_checkpoint_path: "./ray_results/PPO/PPO_my_env/"
+normalize: False
+compute_diffs_on_reward: True
+debug_mode: False
+error_reward: -100.0
+train_iter: 2000

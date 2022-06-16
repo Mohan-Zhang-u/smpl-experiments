@@ -1,0 +1,5 @@
+plt_dir: "plt_results"
+best_checkpoint_path: "./ray_results/PG/PG_my_env/"
+normalize: True
+compute_diffs_on_reward: True
+debug_mode: False

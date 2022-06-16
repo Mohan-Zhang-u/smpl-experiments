@@ -1,0 +1,26 @@
+env_name: 'pensimenv'
+model_name: 'ppo'
+normalize: False
+dense_reward: True
+debug_mode: False
+
+scheduler_name: 'fifo_scheduler'
+time_budget_s: 86400 # a day in seconds
+use_tune: True
+num_gpus: 1
+num_workers: 1
+# num_gpus_per_worker: 0.1
+train_iter: 2000
+plt_dir: "online_plt_results"
+local_dir: "pensimenv_ray_results"
+log_to_file: 'logfile.log'
+
+# env specific configs
+reward_on_steady: False
+reward_on_absolute_efactor: True
+compute_diffs_on_reward: False
+standard_reward_style: 'yield'
+initial_state_deviation_ratio: 0.1
+
+# eval specific configs
+eval_num_episodes: 100
