@@ -5,7 +5,7 @@ gym>=0.18.3
 tqdm>=4.59.0
 torch
 mzutils>=0.2006
-smpl
+git+git@github.com:smpl-env/smpl.git # smpl
 ray
 ray[tune]
 ray[rllib]
